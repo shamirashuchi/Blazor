@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EmployeeManagement.web.bundle.scp.css",
+      "PackagePath": "staticwebassets\\EmployeeManagement.web.7949rsipvv.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.EmployeeManagement.web.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.EmployeeManagement.web.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.EmployeeManagement.web.props",
+      "PackagePath": "build\\EmployeeManagement.web.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.EmployeeManagement.web.props",
+      "PackagePath": "buildMultiTargeting\\EmployeeManagement.web.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.EmployeeManagement.web.props",
+      "PackagePath": "buildTransitive\\EmployeeManagement.web.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
