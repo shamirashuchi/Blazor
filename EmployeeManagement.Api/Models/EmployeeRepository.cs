@@ -1,0 +1,92 @@
+﻿using EmployeeManagement.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace EmployeeManagement.Api.Models
+{
+    public class EmployeeRepository : IEmployeeRepository
+    {
+        private readonly AppDbContext appDbContext;
+
+        public EmployeeRepository(AppDbContext appDbContext)
+        {
+            this.appDbContext = appDbContext;
+        }
+        public async Task<Employee> AddEmployee(Employee employee)
+
+        {
+            var result = await appDbContext.Employees.AddAsync(employee);
+            await appDbContext.SaveChangesAsync();
+            return result.Entity;
+        }
+        public async Task<Employee> DeleteEmployee(int employeeId)
+
+        {
+            var result = await appDbContext.Employees
+             .FirstOrDefaultAsync(e => e.EmployeeId == employeeId);
+            if (result != null)
+            {
+                appDbContext.Employees.Remove(result);
+                await appDbContext.SaveChangesAsync();
+                return result;
+            }
+            return null;
+        }
+
+
+        public async Task<Employee> GetEmployee(int employeeId)
+        {
+            var employee = await appDbContext.Employees
+                .FirstOrDefaultAsync(e => e.EmployeeId == employeeId);
+
+            if (employee == null)
+            {
+                throw new KeyNotFoundException($"Employee with ID {employeeId} not found.");
+            }
+
+            return employee;
+        }
+
+        public async Task<Employee> GetEmployeeByEmail(string email)
+        {
+            var employee = await appDbContext.Employees
+                .FirstOrDefaultAsync(e => e.Email == email);
+
+            if (employee == null)
+            {
+                throw new KeyNotFoundException($"Employee with email {email} not found.");
+            }
+
+            return employee;
+        }
+
+
+        public Task<IEnumerable<Employee>> GetEmployees()
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<Employee> UpdateEmployee(Employee employee)
+        {
+            var result = await appDbContext.Employees
+                .FirstOrDefaultAsync(e => e.EmployeeId == employee.EmployeeId);
+            if(result != null)
+            {
+                result.FirstName = employee.FirstName;
+                result.LastName = employee.LastName;
+                result.Email = employee.Email;
+                result.DateOfBirth = employee.DateOfBirth;
+                result.Gender = employee.Gender;
+                result.DepartmentId = employee.DepartmentId;
+                result.PhotoPath = employee.PhotoPath;
+
+                await appDbContext.SaveChangesAsync();
+                return result;
+            }
+            return null;
+        }
+
+        
+
+        
+    }
+}

@@ -1,26 +1,38 @@
 {
   "Version": 1,
-  "Hash": "XZSUZkFKYkqUH/vQaktungy+u3bjTFzzK6th0B7OA4Q=",
+  "Hash": "vjnZdTAMbGnVfYZtryWtw+iLneCgVJ9iUOjQz2vT1q4=",
   "Source": "EmployeeManagement.web",
   "BasePath": "_content/EmployeeManagement.web",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Blazor-main\\EmployeeManagement.Api\\EmployeeManagement.Api.csproj",
+      "Version": 2,
+      "Source": "EmployeeManagement.Api",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
   "DiscoveryPatterns": [
     {
       "Name": "EmployeeManagement.web\\wwwroot",
       "Source": "EmployeeManagement.web",
-      "ContentRoot": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\wwwroot\\",
+      "ContentRoot": "C:\\Blazor-main\\EmployeeManagement.web\\wwwroot\\",
       "BasePath": "_content/EmployeeManagement.web",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\EmployeeManagement.web.styles.css",
+      "Identity": "C:\\Blazor-main\\EmployeeManagement.web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\EmployeeManagement.web.styles.css",
       "SourceId": "EmployeeManagement.web",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Blazor-main\\EmployeeManagement.web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/EmployeeManagement.web",
       "RelativePath": "EmployeeManagement.web#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
@@ -35,13 +47,13 @@
       "Integrity": "y8jC0EB/iqEsH/Cyp46Zu/XVWlRFjkTxFa5BUbqjhCw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\EmployeeManagement.web.styles.css"
+      "OriginalItemSpec": "C:\\Blazor-main\\EmployeeManagement.web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\EmployeeManagement.web.styles.css"
     },
     {
-      "Identity": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EmployeeManagement.web.bundle.scp.css",
+      "Identity": "C:\\Blazor-main\\EmployeeManagement.web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EmployeeManagement.web.bundle.scp.css",
       "SourceId": "EmployeeManagement.web",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Blazor-main\\EmployeeManagement.web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/EmployeeManagement.web",
       "RelativePath": "EmployeeManagement.web#[.{fingerprint}]!.bundle.scp.css",
       "AssetKind": "All",
@@ -56,13 +68,13 @@
       "Integrity": "y8jC0EB/iqEsH/Cyp46Zu/XVWlRFjkTxFa5BUbqjhCw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EmployeeManagement.web.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Blazor-main\\EmployeeManagement.web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EmployeeManagement.web.bundle.scp.css"
     },
     {
-      "Identity": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\wwwroot\\app.css",
+      "Identity": "C:\\Blazor-main\\EmployeeManagement.web\\wwwroot\\app.css",
       "SourceId": "EmployeeManagement.web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\wwwroot\\",
+      "ContentRoot": "C:\\Blazor-main\\EmployeeManagement.web\\wwwroot\\",
       "BasePath": "_content/EmployeeManagement.web",
       "RelativePath": "app#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -73,17 +85,17 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "da95v2qkru",
-      "Integrity": "u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=",
+      "Fingerprint": "v5b7vqvy3h",
+      "Integrity": "Q8siP9SiZV8GNOzlkHETapY6R/XrhQbE90aAnlHmHFo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Blazor-main\\EmployeeManagement.web\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "EmployeeManagement.web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\wwwroot\\",
+      "ContentRoot": "C:\\Blazor-main\\EmployeeManagement.web\\wwwroot\\",
       "BasePath": "_content/EmployeeManagement.web",
       "RelativePath": "bootstrap/bootstrap.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -101,10 +113,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Blazor-main\\EmployeeManagement.web\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "EmployeeManagement.web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\wwwroot\\",
+      "ContentRoot": "C:\\Blazor-main\\EmployeeManagement.web\\wwwroot\\",
       "BasePath": "_content/EmployeeManagement.web",
       "RelativePath": "bootstrap/bootstrap.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -122,10 +134,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\wwwroot\\favicon.png",
+      "Identity": "C:\\Blazor-main\\EmployeeManagement.web\\wwwroot\\favicon.png",
       "SourceId": "EmployeeManagement.web",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\wwwroot\\",
+      "ContentRoot": "C:\\Blazor-main\\EmployeeManagement.web\\wwwroot\\",
       "BasePath": "_content/EmployeeManagement.web",
       "RelativePath": "favicon#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -146,7 +158,7 @@
   "Endpoints": [
     {
       "Route": "app.css",
-      "AssetFile": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\wwwroot\\app.css",
+      "AssetFile": "C:\\Blazor-main\\EmployeeManagement.web\\wwwroot\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -155,7 +167,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2591"
+          "Value": "2540"
         },
         {
           "Name": "Content-Type",
@@ -163,11 +175,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=\""
+          "Value": "\"Q8siP9SiZV8GNOzlkHETapY6R/XrhQbE90aAnlHmHFo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 23:18:37 GMT"
+          "Value": "Sun, 23 Feb 2025 03:38:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -177,13 +189,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE="
+          "Value": "sha256-Q8siP9SiZV8GNOzlkHETapY6R/XrhQbE90aAnlHmHFo="
         }
       ]
     },
     {
-      "Route": "app.da95v2qkru.css",
-      "AssetFile": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\wwwroot\\app.css",
+      "Route": "app.v5b7vqvy3h.css",
+      "AssetFile": "C:\\Blazor-main\\EmployeeManagement.web\\wwwroot\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -192,7 +204,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2591"
+          "Value": "2540"
         },
         {
           "Name": "Content-Type",
@@ -200,11 +212,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=\""
+          "Value": "\"Q8siP9SiZV8GNOzlkHETapY6R/XrhQbE90aAnlHmHFo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 23:18:37 GMT"
+          "Value": "Sun, 23 Feb 2025 03:38:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -214,7 +226,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "da95v2qkru"
+          "Value": "v5b7vqvy3h"
         },
         {
           "Name": "label",
@@ -222,13 +234,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE="
+          "Value": "sha256-Q8siP9SiZV8GNOzlkHETapY6R/XrhQbE90aAnlHmHFo="
         }
       ]
     },
     {
       "Route": "bootstrap/bootstrap.min.bpk8xqwxhs.css",
-      "AssetFile": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "AssetFile": "C:\\Blazor-main\\EmployeeManagement.web\\wwwroot\\bootstrap\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -249,7 +261,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 23:18:37 GMT"
+          "Value": "Sun, 23 Feb 2025 03:38:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -273,7 +285,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css",
-      "AssetFile": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "AssetFile": "C:\\Blazor-main\\EmployeeManagement.web\\wwwroot\\bootstrap\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -294,7 +306,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 23:18:37 GMT"
+          "Value": "Sun, 23 Feb 2025 03:38:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -310,7 +322,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css.8inm30yfxf.map",
-      "AssetFile": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "AssetFile": "C:\\Blazor-main\\EmployeeManagement.web\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -331,7 +343,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 23:18:37 GMT"
+          "Value": "Sun, 23 Feb 2025 03:38:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -355,7 +367,7 @@
     },
     {
       "Route": "bootstrap/bootstrap.min.css.map",
-      "AssetFile": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "AssetFile": "C:\\Blazor-main\\EmployeeManagement.web\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -376,7 +388,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 23:18:37 GMT"
+          "Value": "Sun, 23 Feb 2025 03:38:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -392,7 +404,7 @@
     },
     {
       "Route": "EmployeeManagement.web.7949rsipvv.bundle.scp.css",
-      "AssetFile": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EmployeeManagement.web.bundle.scp.css",
+      "AssetFile": "C:\\Blazor-main\\EmployeeManagement.web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EmployeeManagement.web.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -413,7 +425,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 00:20:23 GMT"
+          "Value": "Sun, 23 Feb 2025 05:39:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -437,7 +449,7 @@
     },
     {
       "Route": "EmployeeManagement.web.7949rsipvv.styles.css",
-      "AssetFile": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\EmployeeManagement.web.styles.css",
+      "AssetFile": "C:\\Blazor-main\\EmployeeManagement.web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\EmployeeManagement.web.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -458,7 +470,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 00:20:23 GMT"
+          "Value": "Sun, 23 Feb 2025 05:39:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -482,7 +494,7 @@
     },
     {
       "Route": "EmployeeManagement.web.bundle.scp.css",
-      "AssetFile": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EmployeeManagement.web.bundle.scp.css",
+      "AssetFile": "C:\\Blazor-main\\EmployeeManagement.web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EmployeeManagement.web.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -503,7 +515,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 00:20:23 GMT"
+          "Value": "Sun, 23 Feb 2025 05:39:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -519,7 +531,7 @@
     },
     {
       "Route": "EmployeeManagement.web.styles.css",
-      "AssetFile": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\EmployeeManagement.web.styles.css",
+      "AssetFile": "C:\\Blazor-main\\EmployeeManagement.web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\EmployeeManagement.web.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -540,7 +552,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 23 Feb 2025 00:20:23 GMT"
+          "Value": "Sun, 23 Feb 2025 05:39:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -556,7 +568,7 @@
     },
     {
       "Route": "favicon.ifv42okdf2.png",
-      "AssetFile": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\wwwroot\\favicon.png",
+      "AssetFile": "C:\\Blazor-main\\EmployeeManagement.web\\wwwroot\\favicon.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -577,7 +589,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 23:18:37 GMT"
+          "Value": "Sun, 23 Feb 2025 03:38:14 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -601,7 +613,7 @@
     },
     {
       "Route": "favicon.png",
-      "AssetFile": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\wwwroot\\favicon.png",
+      "AssetFile": "C:\\Blazor-main\\EmployeeManagement.web\\wwwroot\\favicon.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -622,7 +634,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 23:18:37 GMT"
+          "Value": "Sun, 23 Feb 2025 03:38:14 GMT"
         },
         {
           "Name": "Cache-Control",

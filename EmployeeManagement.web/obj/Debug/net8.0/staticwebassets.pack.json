@@ -1,23 +1,23 @@
 {
   "Files": [
     {
-      "Id": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EmployeeManagement.web.bundle.scp.css",
+      "Id": "C:\\Blazor-main\\EmployeeManagement.web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EmployeeManagement.web.bundle.scp.css",
       "PackagePath": "staticwebassets\\EmployeeManagement.web.7949rsipvv.bundle.scp.css"
     },
     {
-      "Id": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\wwwroot\\app.css",
+      "Id": "C:\\Blazor-main\\EmployeeManagement.web\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },
     {
-      "Id": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Blazor-main\\EmployeeManagement.web\\wwwroot\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Blazor-main\\EmployeeManagement.web\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\FinalProject\\Blazor\\EmployeeManagement.web\\wwwroot\\favicon.png",
+      "Id": "C:\\Blazor-main\\EmployeeManagement.web\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {

@@ -1,4 +1,6 @@
 
+using Microsoft.EntityFrameworkCore;
+using EmployeeManagement.Api.Models;
 namespace EmployeeManagement.Api
 {
     public class Program
@@ -6,6 +8,10 @@ namespace EmployeeManagement.Api
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddDbContextFactory<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DBConnection") ?? throw new InvalidOperationException("Connection string 'BlazorApp1Context' not found.")));
+
+          
 
             // Add services to the container.
 
@@ -13,6 +19,8 @@ namespace EmployeeManagement.Api
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
+            builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 
             var app = builder.Build();
 
