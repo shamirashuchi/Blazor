@@ -7,7 +7,17 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[EmployeeManagement.Models.Employee, EmployeeManagement.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "EmployeeManagement.Api.Controllers.EmployeesController",
@@ -38,7 +48,7 @@
   {
     "ContainingType": "EmployeeManagement.Api.Controllers.EmployeesController",
     "Method": "GetEmployee",
-    "RelativePath": "api/Employees/{id }",
+    "RelativePath": "api/Employees/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -46,11 +56,6 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "id ",
-        "Type": "",
         "IsRequired": true
       }
     ],

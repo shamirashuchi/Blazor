@@ -1,6 +1,9 @@
-﻿namespace EmployeeManagement.web.Services
+﻿using EmployeeManagement.Models;
+
+namespace EmployeeManagement.web.Services
 {
     public interface IEmployeeService
     {
+        Task<IEnumerable<Employee>> GetEmployees();
     }
 }

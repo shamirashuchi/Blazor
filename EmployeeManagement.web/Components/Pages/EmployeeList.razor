@@ -1,6 +1,33 @@
-﻿@page "/"
+﻿
+@page "/"
 @inherits EmployeeListBase
 
-<h3>EmployeeList</h3>
+<h3>Employee List</h3>
 
-
+@if (Employees != null && Employees.Any())
+{
+    <div class="row">
+        @foreach (var employee in Employees)
+        {
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="https://via.placeholder.com/150" alt="Employee Image">
+                    <div class="card-body">
+                        <h5 class="card-title">@employee.FirstName @employee.LastName</h5>
+                        <p class="card-text">
+                            <strong>Position:</strong> @employee.FirstName <br />
+                            <strong>Department:</strong> @employee.LastName
+                        </p>
+                        <a href="#" class="btn btn-primary" @onclick="() => ViewEmployee(employee.Id)">View</a>
+                        <a href="#" class="btn btn-warning" @onclick="() => EditEmployee(employee.Id)">Edit</a>
+                        <a href="#" class="btn btn-danger" @onclick="() => DeleteEmployee(employee.Id)">Delete</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p>No employees available.</p>
+}

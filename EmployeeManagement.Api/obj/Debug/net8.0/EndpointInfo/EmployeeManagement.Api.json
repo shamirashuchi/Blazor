@@ -12,7 +12,33 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Employee"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Employee"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Employee"
+                  }
+                }
+              }
+            }
           }
         }
       },
@@ -63,7 +89,7 @@
         }
       }
     },
-    "/api/Employees/{id }": {
+    "/api/Employees/{id}": {
       "get": {
         "tags": [
           "Employees"
@@ -71,18 +97,11 @@
         "parameters": [
           {
             "name": "id",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "id ",
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "integer",
+              "format": "int32"
             }
           }
         ],
@@ -108,9 +127,7 @@
             }
           }
         }
-      }
-    },
-    "/api/Employees/{id}": {
+      },
       "put": {
         "tags": [
           "Employees"
@@ -250,10 +267,6 @@
   "components": {
     "schemas": {
       "Employee": {
-        "required": [
-          "firstName",
-          "lastName"
-        ],
         "type": "object",
         "properties": {
           "employeeId": {
@@ -261,12 +274,12 @@
             "format": "int32"
           },
           "firstName": {
-            "minLength": 2,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "lastName": {
-            "minLength": 1,
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "email": {
             "type": "string",

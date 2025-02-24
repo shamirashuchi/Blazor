@@ -1,4 +1,5 @@
 using EmployeeManagement.web.Components;
+using EmployeeManagement.web.Services;
 
 namespace EmployeeManagement.web
 {
@@ -8,6 +9,11 @@ namespace EmployeeManagement.web
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            //Keyed Services registration
+            builder.Services.AddHttpClient<IEmployeeService, EmployeeService>(client =>
+            {
+                client.BaseAddress = new Uri("https://localhost:7285/");
+            });
             // Add services to the container.
             builder.Services.AddRazorComponents()
                 .AddInteractiveServerComponents();

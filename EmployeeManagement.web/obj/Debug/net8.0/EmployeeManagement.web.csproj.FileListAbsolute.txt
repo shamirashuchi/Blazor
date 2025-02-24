@@ -182,3 +182,5 @@ C:\Blazor-main\EmployeeManagement.web\obj\Debug\net8.0\refint\EmployeeManagement
 C:\Blazor-main\EmployeeManagement.web\obj\Debug\net8.0\EmployeeManagement.web.pdb
 C:\Blazor-main\EmployeeManagement.web\obj\Debug\net8.0\EmployeeManagement.web.genruntimeconfig.cache
 C:\Blazor-main\EmployeeManagement.web\obj\Debug\net8.0\ref\EmployeeManagement.web.dll
+C:\Blazor-main\EmployeeManagement.web\obj\Debug\net8.0\EmployeeManagement.web.sourcelink.json
+C:\Blazor-main\EmployeeManagement.web\bin\Debug\net8.0\System.Net.Http.Json.dll

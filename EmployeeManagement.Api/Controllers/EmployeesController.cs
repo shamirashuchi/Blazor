@@ -15,23 +15,59 @@ namespace EmployeeManagement.Api.Controllers
             this.employeeRepository = employeeRepository;
         }
 
+        //[HttpGet("{search}/{name}/{gender}")]
+        //public async Task<ActionResult<Enumerable<Employee>>> Search(string name, Gender? gender)
+        //{
+        //    try 
+	       // {
+        //        var result = await employeeRepository.Search(name, gender);
+        //        if(result.Any())
+        //        {
+        //            return Ok(result);
+        //        }
+        //        return NotFound();
+	       // }
+	       // catch (Exception)
+	       // {
+
+        //        return StatusCode(StatusCodes.Status500InternalServerError, "Error retrieviing data from database");
+        //    }
+        //  }
+        
         [HttpGet]
-        public async Task<ActionResult> GetEmployees()
+    
+        public async Task<ActionResult<IEnumerable<Employee>>> GetEmployees()
         {
             try
             {
-                return Ok(await employeeRepository.GetEmployees());
+                var employees = await employeeRepository.GetEmployees();
+                if (employees == null || !employees.Any())
+                {
+                    return NotFound("No employees found.");
+                }
+                return Ok(employees);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                // Log the full exception including inner exceptions (if any)
+                Console.WriteLine($"Exception: {ex.Message}");
+                Console.WriteLine($"StackTrace: {ex.StackTrace}");
 
-                return StatusCode(StatusCodes.Status500InternalServerError, "Error retrieviing data from database");
+                if (ex.InnerException != null)
+                {
+                    Console.WriteLine($"InnerException: {ex.InnerException.Message}");
+                    Console.WriteLine($"Inner StackTrace: {ex.InnerException.StackTrace}");
+                }
+
+                // Return a more detailed error message to the client
+                return StatusCode(500, $"Error retrieving data from database: {ex.Message}");
             }
-
         }
 
 
-        [HttpGet("{id : int}")]
+
+
+        [HttpGet("{id:int}")]
         public async Task<ActionResult<Employee>> GetEmployee(int id)
         {
             try
@@ -46,7 +82,7 @@ namespace EmployeeManagement.Api.Controllers
             catch (Exception)
             {
 
-                return StatusCode(StatusCodes.Status500InternalServerError, "Error retrieviing data from  the database");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error retrieviing data from  the database hello");
             }
 
         }
@@ -63,13 +99,13 @@ namespace EmployeeManagement.Api.Controllers
                 {
                     return BadRequest();
                 }
-                var emp = employeeRepository.GetEmployeeByEmail(employee.Email);
+                //var emp = employeeRepository.GetEmployeeByEmail(employee.Email);
 
-                if (emp != null)
-                {
-                    ModelState.AddModelError("Email", "Employee Email already in use");
-                    return BadRequest(ModelState);
-                }
+                //if (emp != null)
+                //{
+                //    ModelState.AddModelError("Email", "Employee Email already in use");
+                //    return BadRequest(ModelState);
+                //}
                 var createdEmployee = await employeeRepository.AddEmployee(employee);
 
                 return CreatedAtAction(nameof(GetEmployee), new { id = createdEmployee.EmployeeId }, createdEmployee);

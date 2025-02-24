@@ -172,3 +172,4 @@ C:\Blazor-main\EmployeeManagement.Api\obj\Debug\net8.0\refint\EmployeeManagement
 C:\Blazor-main\EmployeeManagement.Api\obj\Debug\net8.0\EmployeeManagement.Api.pdb
 C:\Blazor-main\EmployeeManagement.Api\obj\Debug\net8.0\EmployeeManagement.Api.genruntimeconfig.cache
 C:\Blazor-main\EmployeeManagement.Api\obj\Debug\net8.0\ref\EmployeeManagement.Api.dll
+C:\Blazor-main\EmployeeManagement.Api\obj\Debug\net8.0\EmployeeManagement.Api.sourcelink.json
