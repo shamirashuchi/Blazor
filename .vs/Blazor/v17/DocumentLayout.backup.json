@@ -3,28 +3,32 @@
   "WorkspaceRootPath": "C:\\Blazor-main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{395D399A-4C6A-468A-BB6E-E6BEE284AA62}|EmployeeManagement.web\\EmployeeManagement.web.csproj|c:\\blazor-main\\employeemanagement.web\\components\\pages\\employeedetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{395D399A-4C6A-468A-BB6E-E6BEE284AA62}|EmployeeManagement.web\\EmployeeManagement.web.csproj|solutionrelative:employeemanagement.web\\components\\pages\\employeedetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{395D399A-4C6A-468A-BB6E-E6BEE284AA62}|EmployeeManagement.web\\EmployeeManagement.web.csproj|c:\\blazor-main\\employeemanagement.web\\components\\pages\\employeelistbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{395D399A-4C6A-468A-BB6E-E6BEE284AA62}|EmployeeManagement.web\\EmployeeManagement.web.csproj|solutionrelative:employeemanagement.web\\components\\pages\\employeelistbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{395D399A-4C6A-468A-BB6E-E6BEE284AA62}|EmployeeManagement.web\\EmployeeManagement.web.csproj|c:\\blazor-main\\employeemanagement.web\\components\\pages\\displayemployee.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{395D399A-4C6A-468A-BB6E-E6BEE284AA62}|EmployeeManagement.web\\EmployeeManagement.web.csproj|solutionrelative:employeemanagement.web\\components\\pages\\displayemployee.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{395D399A-4C6A-468A-BB6E-E6BEE284AA62}|EmployeeManagement.web\\EmployeeManagement.web.csproj|c:\\blazor-main\\employeemanagement.web\\components\\pages\\displayemployeebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{395D399A-4C6A-468A-BB6E-E6BEE284AA62}|EmployeeManagement.web\\EmployeeManagement.web.csproj|solutionrelative:employeemanagement.web\\components\\pages\\displayemployeebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{395D399A-4C6A-468A-BB6E-E6BEE284AA62}|EmployeeManagement.web\\EmployeeManagement.web.csproj|c:\\blazor-main\\employeemanagement.web\\components\\pages\\employeelist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{395D399A-4C6A-468A-BB6E-E6BEE284AA62}|EmployeeManagement.web\\EmployeeManagement.web.csproj|solutionrelative:employeemanagement.web\\components\\pages\\employeelist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{395D399A-4C6A-468A-BB6E-E6BEE284AA62}|EmployeeManagement.web\\EmployeeManagement.web.csproj|c:\\blazor-main\\employeemanagement.web\\components\\pages\\employeelistbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{395D399A-4C6A-468A-BB6E-E6BEE284AA62}|EmployeeManagement.web\\EmployeeManagement.web.csproj|solutionrelative:employeemanagement.web\\components\\pages\\employeelistbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{395D399A-4C6A-468A-BB6E-E6BEE284AA62}|EmployeeManagement.web\\EmployeeManagement.web.csproj|c:\\blazor-main\\employeemanagement.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{395D399A-4C6A-468A-BB6E-E6BEE284AA62}|EmployeeManagement.web\\EmployeeManagement.web.csproj|solutionrelative:employeemanagement.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{395D399A-4C6A-468A-BB6E-E6BEE284AA62}|EmployeeManagement.web\\EmployeeManagement.web.csproj|c:\\blazor-main\\employeemanagement.web\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{395D399A-4C6A-468A-BB6E-E6BEE284AA62}|EmployeeManagement.web\\EmployeeManagement.web.csproj|solutionrelative:employeemanagement.web\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{395D399A-4C6A-468A-BB6E-E6BEE284AA62}|EmployeeManagement.web\\EmployeeManagement.web.csproj|c:\\blazor-main\\employeemanagement.web\\components\\pages\\editemployeebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{395D399A-4C6A-468A-BB6E-E6BEE284AA62}|EmployeeManagement.web\\EmployeeManagement.web.csproj|solutionrelative:employeemanagement.web\\components\\pages\\editemployeebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{395D399A-4C6A-468A-BB6E-E6BEE284AA62}|EmployeeManagement.web\\EmployeeManagement.web.csproj|c:\\blazor-main\\employeemanagement.web\\components\\pages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{395D399A-4C6A-468A-BB6E-E6BEE284AA62}|EmployeeManagement.web\\EmployeeManagement.web.csproj|solutionrelative:employeemanagement.web\\components\\pages\\create.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{395D399A-4C6A-468A-BB6E-E6BEE284AA62}|EmployeeManagement.web\\EmployeeManagement.web.csproj|c:\\blazor-main\\employeemanagement.web\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{395D399A-4C6A-468A-BB6E-E6BEE284AA62}|EmployeeManagement.web\\EmployeeManagement.web.csproj|solutionrelative:employeemanagement.web\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{395D399A-4C6A-468A-BB6E-E6BEE284AA62}|EmployeeManagement.web\\EmployeeManagement.web.csproj|c:\\blazor-main\\employeemanagement.web\\components\\pages\\editemployee.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{395D399A-4C6A-468A-BB6E-E6BEE284AA62}|EmployeeManagement.web\\EmployeeManagement.web.csproj|solutionrelative:employeemanagement.web\\components\\pages\\editemployee.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,84 +38,117 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EmployeeDetails.razor",
-              "DocumentMoniker": "C:\\Blazor-main\\EmployeeManagement.web\\Components\\Pages\\EmployeeDetails.razor",
-              "RelativeDocumentMoniker": "EmployeeManagement.web\\Components\\Pages\\EmployeeDetails.razor",
-              "ToolTip": "C:\\Blazor-main\\EmployeeManagement.web\\Components\\Pages\\EmployeeDetails.razor",
-              "RelativeToolTip": "EmployeeManagement.web\\Components\\Pages\\EmployeeDetails.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-24T10:15:32.003Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EmployeeListBase.cs",
-              "DocumentMoniker": "C:\\Blazor-main\\EmployeeManagement.web\\Components\\Pages\\EmployeeListBase.cs",
-              "RelativeDocumentMoniker": "EmployeeManagement.web\\Components\\Pages\\EmployeeListBase.cs",
-              "ToolTip": "C:\\Blazor-main\\EmployeeManagement.web\\Components\\Pages\\EmployeeListBase.cs",
-              "RelativeToolTip": "EmployeeManagement.web\\Components\\Pages\\EmployeeListBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Blazor-main\\EmployeeManagement.web\\Program.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement.web\\Program.cs",
+              "ToolTip": "C:\\Blazor-main\\EmployeeManagement.web\\Program.cs",
+              "RelativeToolTip": "EmployeeManagement.web\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T10:07:44.264Z",
+              "WhenOpened": "2025-03-03T08:11:07.108Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "EmployeeService.cs",
-              "DocumentMoniker": "C:\\Blazor-main\\EmployeeManagement.web\\Services\\EmployeeService.cs",
-              "RelativeDocumentMoniker": "EmployeeManagement.web\\Services\\EmployeeService.cs",
-              "ToolTip": "C:\\Blazor-main\\EmployeeManagement.web\\Services\\EmployeeService.cs",
-              "RelativeToolTip": "EmployeeManagement.web\\Services\\EmployeeService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T10:01:12.31Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "EmployeeList.razor",
               "DocumentMoniker": "C:\\Blazor-main\\EmployeeManagement.web\\Components\\Pages\\EmployeeList.razor",
               "RelativeDocumentMoniker": "EmployeeManagement.web\\Components\\Pages\\EmployeeList.razor",
               "ToolTip": "C:\\Blazor-main\\EmployeeManagement.web\\Components\\Pages\\EmployeeList.razor",
               "RelativeToolTip": "EmployeeManagement.web\\Components\\Pages\\EmployeeList.razor",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAABLAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-24T09:56:53.748Z",
+              "WhenOpened": "2025-03-03T07:03:19.015Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Create.razor",
-              "DocumentMoniker": "C:\\Blazor-main\\EmployeeManagement.web\\Components\\Pages\\Create.razor",
-              "RelativeDocumentMoniker": "EmployeeManagement.web\\Components\\Pages\\Create.razor",
-              "ToolTip": "C:\\Blazor-main\\EmployeeManagement.web\\Components\\Pages\\Create.razor",
-              "RelativeToolTip": "EmployeeManagement.web\\Components\\Pages\\Create.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "DisplayEmployeeBase.cs",
+              "DocumentMoniker": "C:\\Blazor-main\\EmployeeManagement.web\\Components\\Pages\\DisplayEmployeeBase.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement.web\\Components\\Pages\\DisplayEmployeeBase.cs",
+              "ToolTip": "C:\\Blazor-main\\EmployeeManagement.web\\Components\\Pages\\DisplayEmployeeBase.cs",
+              "RelativeToolTip": "EmployeeManagement.web\\Components\\Pages\\DisplayEmployeeBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T06:39:17.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmployeeListBase.cs",
+              "DocumentMoniker": "C:\\Blazor-main\\EmployeeManagement.web\\Components\\Pages\\EmployeeListBase.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement.web\\Components\\Pages\\EmployeeListBase.cs",
+              "ToolTip": "C:\\Blazor-main\\EmployeeManagement.web\\Components\\Pages\\EmployeeListBase.cs*",
+              "RelativeToolTip": "EmployeeManagement.web\\Components\\Pages\\EmployeeListBase.cs*",
+              "ViewState": "AgIAABAAAAAAAAAAAAAkwBAAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T07:10:43.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DisplayEmployee.razor",
+              "DocumentMoniker": "C:\\Blazor-main\\EmployeeManagement.web\\Components\\Pages\\DisplayEmployee.razor",
+              "RelativeDocumentMoniker": "EmployeeManagement.web\\Components\\Pages\\DisplayEmployee.razor",
+              "ToolTip": "C:\\Blazor-main\\EmployeeManagement.web\\Components\\Pages\\DisplayEmployee.razor",
+              "RelativeToolTip": "EmployeeManagement.web\\Components\\Pages\\DisplayEmployee.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-24T09:56:45.727Z",
+              "WhenOpened": "2025-03-03T06:37:52.557Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "App.razor",
-              "DocumentMoniker": "C:\\Blazor-main\\EmployeeManagement.web\\Components\\App.razor",
-              "RelativeDocumentMoniker": "EmployeeManagement.web\\Components\\App.razor",
-              "ToolTip": "C:\\Blazor-main\\EmployeeManagement.web\\Components\\App.razor",
-              "RelativeToolTip": "EmployeeManagement.web\\Components\\App.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "EditEmployeeBase.cs",
+              "DocumentMoniker": "C:\\Blazor-main\\EmployeeManagement.web\\Components\\Pages\\EditEmployeeBase.cs",
+              "RelativeDocumentMoniker": "EmployeeManagement.web\\Components\\Pages\\EditEmployeeBase.cs",
+              "ToolTip": "C:\\Blazor-main\\EmployeeManagement.web\\Components\\Pages\\EditEmployeeBase.cs",
+              "RelativeToolTip": "EmployeeManagement.web\\Components\\Pages\\EditEmployeeBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T06:23:52.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EditEmployee.razor",
+              "DocumentMoniker": "C:\\Blazor-main\\EmployeeManagement.web\\Components\\Pages\\EditEmployee.razor",
+              "RelativeDocumentMoniker": "EmployeeManagement.web\\Components\\Pages\\EditEmployee.razor",
+              "ToolTip": "C:\\Blazor-main\\EmployeeManagement.web\\Components\\Pages\\EditEmployee.razor",
+              "RelativeToolTip": "EmployeeManagement.web\\Components\\Pages\\EditEmployee.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-24T09:56:36.58Z",
+              "WhenOpened": "2025-03-03T06:21:50.76Z",
               "EditorCaption": ""
             }
           ]
