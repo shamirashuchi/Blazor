@@ -14,7 +14,11 @@ namespace EmployeeManagement.web
             {
                 client.BaseAddress = new Uri("https://localhost:7285/");
             });
-        
+            builder.Services.AddHttpClient<IDepartmentService, DepartmentService>(client =>
+            {
+                client.BaseAddress = new Uri("https://localhost:7285/");
+            });
+
 
             // Add services to the container.
             builder.Services.AddRazorComponents()
