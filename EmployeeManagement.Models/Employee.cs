@@ -25,7 +25,8 @@ namespace EmployeeManagement.Models
 
         public string   PhotoPath { get; set; }
 
-        public Department Department { get; set; }
+      
+        public Department Department { get; set; } = new Department();
 
     }
 }

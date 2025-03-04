@@ -6,16 +6,18 @@ namespace EmployeeManagement.web.Components.Pages
 {
     public class EditEmployeeBase : ComponentBase
     {
+        public Employee Employee { get; set; } = new Employee();
+
         [Inject]
         public IEmployeeService EmployeeService { get; set; }
-
-        public Employee Employee { get; set; } = new Employee();
 
         [Parameter]
         public string Id { get; set; }
 
+
         protected async override Task OnInitializedAsync()
         {
+            Id = Id ?? "1";
             Employee = await EmployeeService.GetEmployee(int.Parse(Id));
         }
     }

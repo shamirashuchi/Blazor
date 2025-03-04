@@ -1,41 +1,46 @@
 ﻿@page "/editemployee/{id}"
 
+
 @inherits EditEmployeeBase
 
-@{
-    var employee = Employee;
-}
-
-<h3>Edit Employee</h3>
-
-@if (employee == null)
-{
-    <p>Loading...</p>
-}
-else
-{
-    <EditForm Model="@Employee">
-        
-
-        <div class="mb-3">
-            <label for="firstName" class="form-label">First Name</label>
-            <InputText id="firstName" class="form-control" @bind-Value="Employee.FirstName" />
+<EditForm Model="@Employee">
+    <h3>Edit Employee</h3>
+    <hr />
+    <div class="form-group row">
+        <label for="firstName" class="col-sm-2 col-form-label">
+            First Name
+        </label>
+        <div class="col-sm-10">
+            <InputText id="firstName" class="form-control" placeholder="First Name"
+                       @bind-Value="Employee.FirstName" />
         </div>
-
-        <div class="mb-3">
-            <label for="lastName" class="form-label">Last Name</label>
-            <InputText id="lastName" class="form-control" @bind-Value="Employee.LastName" />
+    </div>
+    <div class="form-group row">
+        <label for="lastName" class="col-sm-2 col-form-label">
+            Last Name
+        </label>
+        <div class="col-sm-10">
+            <InputText id="lastName" class="form-control" placeholder="Last Name"
+                       @bind-Value="Employee.LastName" />
         </div>
-
-        <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <InputText id="email" class="form-control" @bind-Value="Employee.Email" />
+    </div>
+    <div class="form-group row">
+        <label for="email" class="col-sm-2 col-form-label">
+            Email
+        </label>
+        <div class="col-sm-10">
+            <InputText id="email" class="form-control" placeholder="Email"
+                       @bind-Value="Employee.Email" />
         </div>
-
-        
-
-        <button type="submit" class="btn btn-primary">Save</button>
-    </EditForm>
-}
-
-
+    </div>
+    <div class="form-group row">
+        <label for="department" class="col-sm-2 col-form-label">
+            Department
+        </label>
+        <div class="col-sm-10">
+              <InputText id="department" class="form-control" placeholder="Department"
+                       @bind-Value="Employee.Department.DepartmentName" />
+          
+    </div>
+    </div>
+</EditForm>
