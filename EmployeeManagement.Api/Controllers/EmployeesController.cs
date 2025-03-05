@@ -73,19 +73,21 @@ namespace EmployeeManagement.Api.Controllers
             try
             {
                 var result = await employeeRepository.GetEmployee(id);
-                if (result == null)
+
+                // Properly check if employee is null OR departments list is null/empty
+                if (result.employee == null || result.departments == null || !result.departments.Any())
                 {
                     return NotFound();
                 }
-                return result;
+
+                return Ok(result.employee); // Return only employee, not the whole tuple
             }
             catch (Exception)
             {
-
-                return StatusCode(StatusCodes.Status500InternalServerError, "Error retrieviing data from  the database hello");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Error retrieving data from the database.");
             }
-
         }
+
 
 
 
@@ -127,15 +129,16 @@ namespace EmployeeManagement.Api.Controllers
                     return BadRequest("Employee ID mismatch");
                 }
 
+                // Destructure the tuple to get only the employee
+                var (employeeToUpdate, _) = await employeeRepository.GetEmployee(id);
 
-                var employeeToUpdate = await employeeRepository.GetEmployee(id);
                 if (employeeToUpdate == null)
                 {
                     return NotFound($"Employee with Id = {id} not found");
                 }
 
-                return await employeeRepository.UpdateEmployee(employee);
-
+                var updatedEmployee = await employeeRepository.UpdateEmployee(employee);
+                return Ok(updatedEmployee); // ✅ Return updated employee
             }
             catch (Exception)
             {
@@ -143,23 +146,27 @@ namespace EmployeeManagement.Api.Controllers
             }
         }
 
+
         [HttpDelete("{id:int}")]
         public async Task<ActionResult<Employee>> DeleteEmployee(int id)
         {
             try
             {
-                var employeeToDelete = await employeeRepository.GetEmployee(id);
-                if(employeeToDelete == null)
+                var (employee, _) = await employeeRepository.GetEmployee(id); // Destructure the tuple
+
+                if (employee == null)
                 {
                     return NotFound($"Employee with Id = {id} not found");
                 }
-                return await employeeRepository.DeleteEmployee(id);
+
+                var deletedEmployee = await employeeRepository.DeleteEmployee(id);
+                return Ok(deletedEmployee); // Ensure DeleteEmployee() returns an Employee
             }
             catch (Exception)
             {
-
                 return StatusCode(StatusCodes.Status500InternalServerError, "Error deleting data");
             }
         }
+
     }
 }

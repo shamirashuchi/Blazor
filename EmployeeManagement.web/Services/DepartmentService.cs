@@ -34,7 +34,6 @@ namespace EmployeeManagement.web.Services
             }
             catch (Exception ex)
             {
-                // Log or handle the error as necessary
                 Console.Error.WriteLine($"Error fetching employees: {ex.Message}");
                 return Enumerable.Empty<Department>(); // Return an empty collection in case of error
             }

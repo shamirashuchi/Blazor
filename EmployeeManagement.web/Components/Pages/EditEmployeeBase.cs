@@ -20,16 +20,32 @@ namespace EmployeeManagement.web.Components.Pages
         public string Id { get; set; }
 
 
-       
+
 
 
 
         protected async override Task OnInitializedAsync()
         {
             Id = Id ?? "1";
-            Employee = await EmployeeService.GetEmployee(int.Parse(Id));
-            Departments = (await GetDepartmentsAsync()).ToList();
+            try
+            {
+                var result = await EmployeeService.GetEmployee(int.Parse(Id));
+
+                Employee = result.employee;
+                Departments = result.departments;
+
+                if (Employee == null)
+                {
+                  
+                    Console.Error.WriteLine("Employee not found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine($"Error fetching data: {ex.Message}");
+            }
         }
+
 
         private async Task<IEnumerable<Department>> GetDepartmentsAsync()
         {

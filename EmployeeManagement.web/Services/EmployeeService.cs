@@ -1,4 +1,5 @@
 ﻿using EmployeeManagement.Models;
+using System.Net.Http;
 using System.Net.Http.Json;
 
 namespace EmployeeManagement.web.Services
@@ -12,16 +13,32 @@ namespace EmployeeManagement.web.Services
             this.httpClient = httpClient;
         }
 
-        public async Task<Employee?> GetEmployee(int id)
+        public async Task<(Employee employee, List<Department> departments)> GetEmployee(int employeeId)
         {
             try
             {
-                return await httpClient.GetFromJsonAsync<Employee>($"api/employees/{id}") ?? throw new Exception("Employee not found.");
+                // Fetch employee data from API
+                var employee = await httpClient.GetFromJsonAsync<Employee>($"api/employees/{employeeId}");
+
+                if (employee == null)
+                {
+                    throw new Exception("Employee not found.");
+                }
+
+                // Fetch departments data from API (assuming there's an endpoint for departments)
+                var departments = await httpClient.GetFromJsonAsync<List<Department>>("api/departments");
+
+                if (departments == null)
+                {
+                    throw new Exception("Departments not found.");
+                }
+
+                return (employee, departments);
             }
             catch (Exception ex)
             {
-                Console.Error.WriteLine($"Error fetching employee (ID: {id}): {ex.Message}");
-                return null;
+                Console.Error.WriteLine($"Error fetching employee (ID: {employeeId}): {ex.Message}");
+                return (null, null);
             }
         }
 
@@ -31,13 +48,12 @@ namespace EmployeeManagement.web.Services
             try
             {
                 var employees = await httpClient.GetFromJsonAsync<Employee[]>("api/employees");
-                return employees ?? Enumerable.Empty<Employee>(); // Return an empty collection if null
+                return employees ?? Enumerable.Empty<Employee>();
             }
             catch (Exception ex)
             {
-                // Log or handle the error as necessary
                 Console.Error.WriteLine($"Error fetching employees: {ex.Message}");
-                return Enumerable.Empty<Employee>(); // Return an empty collection in case of error
+                return Enumerable.Empty<Employee>();
             }
         }
 

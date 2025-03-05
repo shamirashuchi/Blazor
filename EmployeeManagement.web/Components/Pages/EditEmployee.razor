@@ -2,7 +2,12 @@
 
 
 @inherits EditEmployeeBase
-
+@if (Employee == null)
+{
+    <p>Loading...</p>
+}
+else
+{
 <EditForm Model="@Employee">
     <h3>Edit Employee</h3>
     <hr />
@@ -51,3 +56,4 @@
 
     </div>
 </EditForm>
+}

@@ -34,7 +34,22 @@ namespace EmployeeManagement.Api.Models
         }
 
 
-        public async Task<Employee> GetEmployee(int employeeId)
+        //public async Task<Employee> GetEmployee(int employeeId)
+        //{
+        //    var employee = await appDbContext.Employees
+        //        .Include(e => e.Department)
+        //        .FirstOrDefaultAsync(e => e.EmployeeId == employeeId);
+
+        //    if (employee == null)
+        //    {
+        //        throw new KeyNotFoundException($"Employee with ID {employeeId} not found.");
+        //    }
+
+        //    return employee;
+        //}
+
+
+        public async Task<(Employee employee, List<Department> departments)> GetEmployee(int employeeId)
         {
             var employee = await appDbContext.Employees
                 .Include(e => e.Department)
@@ -45,8 +60,18 @@ namespace EmployeeManagement.Api.Models
                 throw new KeyNotFoundException($"Employee with ID {employeeId} not found.");
             }
 
-            return employee;
+            var departments = await appDbContext.Departments.ToListAsync();
+
+          
+            if (employee.Department != null && string.IsNullOrEmpty(employee.Department.DepartmentName))
+            {
+                throw new InvalidOperationException($"Department name for employee {employee.FirstName} {employee.LastName} is missing.");
+            }
+
+            return (employee, departments);
         }
+
+
 
         public async Task<Employee> GetEmployeeByEmail(string email)
         {

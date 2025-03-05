@@ -7,28 +7,57 @@ namespace EmployeeManagement.web.Components.Pages
 {
     public class EmployeeDetailsBase : ComponentBase
     {
-        public Employee Employee { get; set; } = new Employee();
-
+      
         protected string Coordinates { get; set; }
 
         protected string ButtonText { get; set; } = "Hide Footer";
         protected string CssClass { get; set; } = null;
 
-        [Inject]
-        public IEmployeeService EmployeeService { get; set; }
-
-        [Parameter]
-        public string Id { get; set; }
 
 
-        protected async override Task OnInitializedAsync()
-        {
-            Id = Id ?? "1";
-            Employee = await EmployeeService.GetEmployee(int.Parse(Id));
-        }
+    
+    
+          public Employee Employee { get; set; } = new Employee();
+            public List<Department> Departments { get; set; } = new List<Department>();
+
+            [Inject]
+            public IEmployeeService EmployeeService { get; set; }
+
+            [Inject]
+            public IDepartmentService DepartmentService { get; set; }
+
+            [Parameter]
+            public string Id { get; set; }
+
+            protected async override Task OnInitializedAsync()
+            {
+                Id = Id ?? "1";
+                try
+                {
+               
+                    var result = await EmployeeService.GetEmployee(int.Parse(Id));
+
+                
+                    Employee = result.employee;
+                    Departments = result.departments;
+
+                    if (Employee == null)
+                    {
+                    
+                        Console.Error.WriteLine("Employee not found.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                
+                    Console.Error.WriteLine($"Error fetching data: {ex.Message}");
+                }
+            }
+       
 
 
-       protected void Mouse_Move(MouseEventArgs e)
+
+    protected void Mouse_Move(MouseEventArgs e)
         {
             Coordinates = $"X = {e.ClientX} Y = {e.ClientY}";
         }

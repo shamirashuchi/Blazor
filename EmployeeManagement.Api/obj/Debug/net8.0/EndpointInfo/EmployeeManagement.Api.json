@@ -276,6 +276,13 @@
           "departmentName": {
             "type": "string",
             "nullable": true
+          },
+          "employees": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Employee"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
