@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace EmployeeManagement.Models
@@ -25,7 +26,7 @@ namespace EmployeeManagement.Models
 
         public string   PhotoPath { get; set; }
 
-
+        [JsonIgnore]
         public Department Department { get; set; }
 
     }

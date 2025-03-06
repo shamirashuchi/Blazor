@@ -47,32 +47,6 @@
   },
   {
     "ContainingType": "EmployeeManagement.Api.Controllers.EmployeesController",
-    "Method": "GetEmployee",
-    "RelativePath": "api/Employees/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "EmployeeManagement.Models.Employee",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "EmployeeManagement.Api.Controllers.EmployeesController",
     "Method": "UpdateEmployee",
     "RelativePath": "api/Employees/{id}",
     "HttpMethod": "PUT",
@@ -127,6 +101,22 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "EmployeeManagement.Api.Controllers.EmployeesController",
+    "Method": "GetEmployee",
+    "RelativePath": "api/Employees/employeedetails/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "EmployeeManagement.Api.Controllers.WeatherForecastController",

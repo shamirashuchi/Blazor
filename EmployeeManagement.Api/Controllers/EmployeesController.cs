@@ -1,6 +1,7 @@
 ﻿using EmployeeManagement.Api.Models;
 using EmployeeManagement.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
 namespace EmployeeManagement.Api.Controllers
@@ -66,27 +67,44 @@ namespace EmployeeManagement.Api.Controllers
 
 
 
-
-        [HttpGet("{id:int}")]
-        public async Task<ActionResult<Employee>> GetEmployee(int id)
+        [HttpGet("employeedetails/{id:int}")]
+        public async Task<IActionResult> GetEmployee(int id)
         {
             try
             {
-                var result = await employeeRepository.GetEmployee(id);
+                Console.WriteLine($"Fetching Employee ID: {id}");
 
-                // Properly check if employee is null OR departments list is null/empty
-                if (result.employee == null || result.departments == null || !result.departments.Any())
+                var (employee, departments) = await employeeRepository.GetEmployee(id);
+
+                if (employee == null)
                 {
-                    return NotFound();
+                    Console.WriteLine($"Employee with ID {id} not found.");
+                    return NotFound(new { message = $"Employee with ID {id} not found." });
                 }
 
-                return Ok(result.employee); // Return only employee, not the whole tuple
+                return Ok(new
+                {
+                    Employee = employee,
+                    Departments = departments
+                });
             }
-            catch (Exception)
+            catch (KeyNotFoundException ex)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, "Error retrieving data from the database.");
+                Console.WriteLine($"Error: {ex.Message}");
+                return NotFound(new { message = ex.Message });
+            }
+            catch (InvalidOperationException ex)
+            {
+                Console.WriteLine($"Validation Error: {ex.Message}");
+                return BadRequest(new { message = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Internal Server Error: {ex.Message}");
+                return StatusCode(500, new { message = "An unexpected error occurred.", details = ex.Message });
             }
         }
+
 
 
 
@@ -129,7 +147,7 @@ namespace EmployeeManagement.Api.Controllers
                     return BadRequest("Employee ID mismatch");
                 }
 
-                // Destructure the tuple to get only the employee
+          
                 var (employeeToUpdate, _) = await employeeRepository.GetEmployee(id);
 
                 if (employeeToUpdate == null)
@@ -138,7 +156,7 @@ namespace EmployeeManagement.Api.Controllers
                 }
 
                 var updatedEmployee = await employeeRepository.UpdateEmployee(employee);
-                return Ok(updatedEmployee); // ✅ Return updated employee
+                return Ok(updatedEmployee); 
             }
             catch (Exception)
             {
@@ -152,7 +170,7 @@ namespace EmployeeManagement.Api.Controllers
         {
             try
             {
-                var (employee, _) = await employeeRepository.GetEmployee(id); // Destructure the tuple
+                var (employee, _) = await employeeRepository.GetEmployee(id);
 
                 if (employee == null)
                 {
@@ -160,7 +178,7 @@ namespace EmployeeManagement.Api.Controllers
                 }
 
                 var deletedEmployee = await employeeRepository.DeleteEmployee(id);
-                return Ok(deletedEmployee); // Ensure DeleteEmployee() returns an Employee
+                return Ok(deletedEmployee);
             }
             catch (Exception)
             {

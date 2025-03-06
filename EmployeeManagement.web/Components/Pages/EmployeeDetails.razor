@@ -1,43 +1,36 @@
-﻿@page "/employeedetails/{id}"
-@page "/employeedetails"
+﻿@page "/Employees/employeedetails/{EmployeeId}"
+
 @inherits EmployeeDetailsBase
-
-
 
 <h3>Employee Details</h3>
 
-@if (@Employee == null || @Departments == null)
+@if (Employee == null || Departments == null)
 {
-    <div class="spinner"></div>
+    <div class="spinner">Loading.....</div>
 }
 else
 {
-
     <div class="card" style="width: 24rem;">
-        <img class="card-img-top" src="@Employee.PhotoPath" @onmousemove="@Mouse_Move" alt="Employee Image">
         <div class="card-body">
-            <h5 class="card-title">@Employee.FirstName @Employee.LastName @Coordinates</h5>
+            <h5 class="card-title">@Employee.FirstName @Employee.LastName</h5>
             <p class="card-text">
                 <strong>Employee ID:</strong> @Employee.EmployeeId <br />
-                  
-                    <h4>Departments</h4>
-                    <ul>
-                        @foreach (var department in Departments)
-                        {
-                            <li>@department.DepartmentName</li>
-                        }
-                    </ul>
                 <strong>Email:</strong> @Employee.Email <br />
 
-                    <a href="/" class="btn btn-primary" @onclick="@Button_Click">@ButtonText</a>
+                <h4>Departments</h4>
+                <ul>
+                    @foreach (var department in Departments)
+                    {
+                        <li>@department.DepartmentName</li>
+                    }
+                </ul>
             </p>
-            <div class="card-footer text-center @CssClass">
-                    <a href="/" class="btn btn-secondary">Back</a>
-                    <a href="@($"/editemployee/{Employee.EmployeeId}")" class="btn btn-warning m-1">Edit</a>
-                    <a href="" class="btn btn-danger">Delete</a>
-            </div>
         </div>
     </div>
+
+    <div class="card-footer text-center">
+        <a href="/" class="btn btn-secondary">Back</a>
+        <a href="@($"/editemployee/{Employee.EmployeeId}")" class="btn btn-warning m-1">Edit</a>
+        <a href="" class="btn btn-danger">Delete</a>
+    </div>
 }
-
-

@@ -7,64 +7,65 @@ namespace EmployeeManagement.web.Components.Pages
 {
     public class EmployeeDetailsBase : ComponentBase
     {
-      
         protected string Coordinates { get; set; }
 
         protected string ButtonText { get; set; } = "Hide Footer";
         protected string CssClass { get; set; } = null;
 
+        public Employee Employee { get; set; } = new Employee(); // Initialize to prevent null reference
+        public List<Department> Departments { get; set; } = new List<Department>();
 
+        [Inject]
+        public IEmployeeService EmployeeService { get; set; }
 
-    
-    
-          public Employee Employee { get; set; } = new Employee();
-            public List<Department> Departments { get; set; } = new List<Department>();
+        [Inject]
+        public IDepartmentService DepartmentService { get; set; }
 
-            [Inject]
-            public IEmployeeService EmployeeService { get; set; }
+        [Parameter]
+        public string EmployeeId { get; set; }
 
-            [Inject]
-            public IDepartmentService DepartmentService { get; set; }
-
-            [Parameter]
-            public string Id { get; set; }
-
-            protected async override Task OnInitializedAsync()
+        protected async override Task OnInitializedAsync()
+        {
+            try
             {
-                Id = Id ?? "1";
-                try
+                // Check if EmployeeId is valid and try to parse it
+                if (int.TryParse(EmployeeId, out int employeeId))
                 {
-               
-                    var result = await EmployeeService.GetEmployee(int.Parse(Id));
+                    // Fetch the employee and department data
+                    var result = await EmployeeService.GetEmployee(employeeId);
 
-                
-                    Employee = result.employee;
-                    Departments = result.departments;
-
-                    if (Employee == null)
+                    // Check if employee and departments are returned
+                    if (result.employee != null && result.departments != null)
                     {
-                    
-                        Console.Error.WriteLine("Employee not found.");
+                        Employee = result.employee;
+                        Departments = result.departments;
+                    }
+                    else
+                    {
+                        Console.Error.WriteLine("Employee or Departments are null.");
                     }
                 }
-                catch (Exception ex)
+                else
                 {
-                
-                    Console.Error.WriteLine($"Error fetching data: {ex.Message}");
+                    Console.Error.WriteLine("Invalid EmployeeId format.");
                 }
             }
-       
+            catch (Exception ex)
+            {
+                Console.Error.WriteLine($"Error fetching data: {ex.Message}");
+            }
+        }
 
-
-
-    protected void Mouse_Move(MouseEventArgs e)
+        // Mouse Move to track coordinates
+        protected void Mouse_Move(MouseEventArgs e)
         {
             Coordinates = $"X = {e.ClientX} Y = {e.ClientY}";
         }
 
+        // Toggle footer visibility
         protected void Button_Click()
         {
-            if(ButtonText == "Hide Footer")
+            if (ButtonText == "Hide Footer")
             {
                 ButtonText = "Show Footer";
                 CssClass = "HideFooter";

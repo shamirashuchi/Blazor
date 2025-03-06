@@ -89,7 +89,7 @@
         }
       }
     },
-    "/api/Employees/{id}": {
+    "/api/Employees/employeedetails/{id}": {
       "get": {
         "tags": [
           "Employees"
@@ -107,27 +107,12 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/Employee"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Employee"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Employee"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/api/Employees/{id}": {
       "put": {
         "tags": [
           "Employees"
@@ -266,27 +251,6 @@
   },
   "components": {
     "schemas": {
-      "Department": {
-        "type": "object",
-        "properties": {
-          "departmentId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "departmentName": {
-            "type": "string",
-            "nullable": true
-          },
-          "employees": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Employee"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "Employee": {
         "type": "object",
         "properties": {
@@ -320,9 +284,6 @@
           "photoPath": {
             "type": "string",
             "nullable": true
-          },
-          "department": {
-            "$ref": "#/components/schemas/Department"
           }
         },
         "additionalProperties": false

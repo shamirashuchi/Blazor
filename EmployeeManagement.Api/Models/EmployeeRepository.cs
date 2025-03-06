@@ -67,6 +67,7 @@ namespace EmployeeManagement.Api.Models
             {
                 throw new InvalidOperationException($"Department name for employee {employee.FirstName} {employee.LastName} is missing.");
             }
+            Console.WriteLine($"Employee found: {employee?.FirstName} {employee?.LastName}");
 
             return (employee, departments);
         }
