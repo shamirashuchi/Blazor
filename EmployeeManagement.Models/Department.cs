@@ -6,8 +6,5 @@ namespace EmployeeManagement.Models
     {
         public int DepartmentId { get; set; }
         public string DepartmentName { get; set; }
-
-        [JsonIgnore]
-        public ICollection<Employee> Employees { get; set; }
     }
 }

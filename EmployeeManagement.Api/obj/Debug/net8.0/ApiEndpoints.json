@@ -21,91 +21,8 @@
   },
   {
     "ContainingType": "EmployeeManagement.Api.Controllers.EmployeesController",
-    "Method": "CreateEmployee",
-    "RelativePath": "api/Employees",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "employee",
-        "Type": "EmployeeManagement.Models.Employee",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "EmployeeManagement.Models.Employee",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "EmployeeManagement.Api.Controllers.EmployeesController",
-    "Method": "UpdateEmployee",
-    "RelativePath": "api/Employees/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "employee",
-        "Type": "EmployeeManagement.Models.Employee",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "EmployeeManagement.Models.Employee",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "EmployeeManagement.Api.Controllers.EmployeesController",
-    "Method": "DeleteEmployee",
-    "RelativePath": "api/Employees/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "EmployeeManagement.Models.Employee",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "EmployeeManagement.Api.Controllers.EmployeesController",
     "Method": "GetEmployee",
-    "RelativePath": "api/Employees/employeedetails/{id}",
+    "RelativePath": "employeedetails/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -116,7 +33,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "EmployeeManagement.Models.Employee",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "EmployeeManagement.Api.Controllers.WeatherForecastController",

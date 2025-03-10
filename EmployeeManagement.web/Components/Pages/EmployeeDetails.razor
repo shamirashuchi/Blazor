@@ -1,36 +1,33 @@
-﻿@page "/Employees/employeedetails/{EmployeeId}"
-
+﻿@page "/employeedetails/{id}"
+@page "/employeedetails"
 @inherits EmployeeDetailsBase
 
-<h3>Employee Details</h3>
-
-@if (Employee == null || Departments == null)
+@if (Employee == null || Employee.Department == null)
 {
-    <div class="spinner">Loading.....</div>
+    <div class="spinner"></div>
 }
 else
 {
-    <div class="card" style="width: 24rem;">
-        <div class="card-body">
-            <h5 class="card-title">@Employee.FirstName @Employee.LastName</h5>
-            <p class="card-text">
-                <strong>Employee ID:</strong> @Employee.EmployeeId <br />
-                <strong>Email:</strong> @Employee.Email <br />
+    <div class="row justify-content-center m-3">
+        <div class="col-sm-8">
+            <div class="card">
+                <div class="card-header">
+                    <h1>@Employee.FirstName @Employee.LastName</h1>
+                </div>
 
-                <h4>Departments</h4>
-                <ul>
-                    @foreach (var department in Departments)
-                    {
-                        <li>@department.DepartmentName</li>
-                    }
-                </ul>
-            </p>
+                <div class="card-body text-center">
+                    <img class="card-img-top" src="@Employee.PhotoPath" />
+
+                    <h4>Employee ID : @Employee.id</h4>
+                    <h4>Email : @Employee.Email</h4>
+                    <h4>Department : @Employee.Department.DepartmentName</h4>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="/" class="btn btn-primary">Back</a>
+                    <a href="#" class="btn btn-primary">Edit</a>
+                    <a href="#" class="btn btn-danger">Delete</a>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <div class="card-footer text-center">
-        <a href="/" class="btn btn-secondary">Back</a>
-        <a href="@($"/editemployee/{Employee.EmployeeId}")" class="btn btn-warning m-1">Edit</a>
-        <a href="" class="btn btn-danger">Delete</a>
     </div>
 }

@@ -12,6 +12,14 @@ namespace EmployeeManagement.Api.Models
         {
             this.appDbContext = appDbContext;
         }
+
+        public async Task<Employee> GetEmployee(int employeeId)
+        {
+            var result =  await appDbContext.Employees
+                .Include(e => e.Department)
+                .FirstOrDefaultAsync(e => e.id == employeeId);
+            return result;
+        }
         public async Task<Employee> AddEmployee(Employee employee)
 
         {
@@ -23,7 +31,7 @@ namespace EmployeeManagement.Api.Models
 
         {
             var result = await appDbContext.Employees
-             .FirstOrDefaultAsync(e => e.EmployeeId == employeeId);
+             .FirstOrDefaultAsync(e => e.id == employeeId);
             if (result != null)
             {
                 appDbContext.Employees.Remove(result);
@@ -34,43 +42,10 @@ namespace EmployeeManagement.Api.Models
         }
 
 
-        //public async Task<Employee> GetEmployee(int employeeId)
-        //{
-        //    var employee = await appDbContext.Employees
-        //        .Include(e => e.Department)
-        //        .FirstOrDefaultAsync(e => e.EmployeeId == employeeId);
-
-        //    if (employee == null)
-        //    {
-        //        throw new KeyNotFoundException($"Employee with ID {employeeId} not found.");
-        //    }
-
-        //    return employee;
-        //}
+       
 
 
-        public async Task<(Employee employee, List<Department> departments)> GetEmployee(int employeeId)
-        {
-            var employee = await appDbContext.Employees
-                .Include(e => e.Department)
-                .FirstOrDefaultAsync(e => e.EmployeeId == employeeId);
-
-            if (employee == null)
-            {
-                throw new KeyNotFoundException($"Employee with ID {employeeId} not found.");
-            }
-
-            var departments = await appDbContext.Departments.ToListAsync();
-
-          
-            if (employee.Department != null && string.IsNullOrEmpty(employee.Department.DepartmentName))
-            {
-                throw new InvalidOperationException($"Department name for employee {employee.FirstName} {employee.LastName} is missing.");
-            }
-            Console.WriteLine($"Employee found: {employee?.FirstName} {employee?.LastName}");
-
-            return (employee, departments);
-        }
+        
 
 
 
@@ -98,7 +73,7 @@ namespace EmployeeManagement.Api.Models
         public async Task<Employee> UpdateEmployee(Employee employee)
         {
             var result = await appDbContext.Employees
-                .FirstOrDefaultAsync(e => e.EmployeeId == employee.EmployeeId);
+                .FirstOrDefaultAsync(e => e.id== employee.id);
             if(result != null)
             {
                 result.FirstName = employee.FirstName;

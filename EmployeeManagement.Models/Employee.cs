@@ -10,7 +10,7 @@ namespace EmployeeManagement.Models
 {
     public class Employee
     {
-        public int EmployeeId { get; set; }
+        public int id { get; set; }
         
        
         public string FirstName { get; set; }
@@ -26,7 +26,7 @@ namespace EmployeeManagement.Models
 
         public string   PhotoPath { get; set; }
 
-        [JsonIgnore]
+       
         public Department Department { get; set; }
 
     }

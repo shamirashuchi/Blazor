@@ -5,7 +5,7 @@ namespace EmployeeManagement.Api.Models
     public interface IEmployeeRepository
     {
         //Task<IEnumerable<Employee>> Search(string name, Gender? gender);
-        Task<(Employee employee, List<Department> departments)> GetEmployee(int employeeId);
+        Task<Employee> GetEmployee(int employeeId);
         Task<IEnumerable<Employee>> GetEmployees();
         //Task<Employee>GetEmployee(int employeeId);
         Task<Employee> GetEmployeeByEmail(string email);
