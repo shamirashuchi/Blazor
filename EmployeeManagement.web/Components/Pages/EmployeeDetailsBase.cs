@@ -7,12 +7,14 @@ namespace EmployeeManagement.web.Components.Pages
 {
     public class EmployeeDetailsBase : ComponentBase
     {
+        
+       
         protected string Coordinates { get; set; }
 
         protected string ButtonText { get; set; } = "Hide Footer";
         protected string CssClass { get; set; } = null;
 
-        public Employee Employee { get; set; } = new Employee(); // Initialize to prevent null reference
+        public Employee Employee { get; set; } = new Employee();
         public List<Department> Departments { get; set; } = new List<Department>();
 
         [Inject]
@@ -22,23 +24,23 @@ namespace EmployeeManagement.web.Components.Pages
         public IDepartmentService DepartmentService { get; set; }
 
         [Parameter]
-        public string EmployeeId { get; set; }
+        public string Id { get; set; }
 
         protected async override Task OnInitializedAsync()
         {
             try
             {
                 // Check if EmployeeId is valid and try to parse it
-                if (int.TryParse(EmployeeId, out int employeeId))
+                if (int.TryParse(Id, out int employeeId)) // Changed 'Id' to 'employeeId'
                 {
                     // Fetch the employee and department data
                     var result = await EmployeeService.GetEmployee(employeeId);
 
                     // Check if employee and departments are returned
-                    if (result.employee != null && result.departments != null)
+                    if (result != null && result.Department != null)
                     {
-                        Employee = result.employee;
-                        Departments = result.departments;
+                        Employee = result;
+                        Departments = new List<Department> { result.Department };
                     }
                     else
                     {
@@ -55,6 +57,7 @@ namespace EmployeeManagement.web.Components.Pages
                 Console.Error.WriteLine($"Error fetching data: {ex.Message}");
             }
         }
+
 
         // Mouse Move to track coordinates
         protected void Mouse_Move(MouseEventArgs e)

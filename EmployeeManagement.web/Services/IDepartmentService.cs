@@ -3,8 +3,10 @@
 namespace EmployeeManagement.web.Services
 {
     public interface IDepartmentService
-    {
-        Task<IEnumerable<Department>> GetDepartmentsAsync();
-        Task<Department> GetDepartment(int id);
-    }
+    
+        {
+            Task<IEnumerable<Department>> GetDepartments();
+            Task<Department> GetDepartment(int id);
+        }
+    
 }

@@ -2,29 +2,24 @@
 using Microsoft.EntityFrameworkCore;
 namespace EmployeeManagement.Api.Models
 {
-    public class DepartmentRepository(AppDbContext appDbContext) : IDepartmentRepository
+    public class DepartmentRepository : IDepartmentRepository
     {
-        private readonly AppDbContext appDbContext = appDbContext;
+        private readonly AppDbContext appDbContext;
 
-        public IEnumerable<EmployeeManagement.Models.Department> GetDepartments()
+        public DepartmentRepository(AppDbContext appDbContext)
         {
-            return appDbContext.Departments;
+            this.appDbContext = appDbContext;
         }
 
-        public Department GetDepartment(int departmentId)
+        public async Task<Department> GetDepartment(int departmentId)
         {
-            var department = appDbContext.Departments
-                .FirstOrDefault(d => d.DepartmentId == departmentId);
-
-            if (department == null)
-            {
-                throw new NotImplementedException();
-            }
-
-            return department;
+            return await appDbContext.Departments
+                .FirstOrDefaultAsync(d => d.DepartmentId == departmentId);
         }
 
-
-
+        public async Task<IEnumerable<Department>> GetDepartments()
+        {
+            return await appDbContext.Departments.ToListAsync();
+        }
     }
 }

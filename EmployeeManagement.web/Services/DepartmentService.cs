@@ -1,4 +1,7 @@
 ﻿using EmployeeManagement.Models;
+using EmployeeManagement.web.Components.Pages;
+using System.Net.Http;
+using System.Net.Http.Json;
 
 namespace EmployeeManagement.web.Services
 {
@@ -11,34 +14,15 @@ namespace EmployeeManagement.web.Services
             this.httpClient = httpClient;
         }
 
-        public async Task<Department?> GetDepartment(int id)
+        public async Task<Department> GetDepartment(int id)
         {
-            try
-            {
-                return await httpClient.GetFromJsonAsync<Department>($"api/employees/{id}") ?? throw new Exception("Department not found.");
-            }
-            catch (Exception ex)
-            {
-                Console.Error.WriteLine($"Error fetching department (ID: {id}): {ex.Message}");
-                return null;
-            }
+            return await httpClient.GetFromJsonAsync<Department>($"api/departments/{id}");
         }
 
-
-        public async Task<IEnumerable<Department>> GetDepartmentsAsync()
+        public async Task<IEnumerable<Department>> GetDepartments()
         {
-            try
-            {
-                var departments = await httpClient.GetFromJsonAsync<Department[]>("api/employees");
-                return departments ?? Enumerable.Empty<Department>();
-            }
-            catch (Exception ex)
-            {
-                Console.Error.WriteLine($"Error fetching employees: {ex.Message}");
-                return Enumerable.Empty<Department>(); // Return an empty collection in case of error
-            }
+            return await httpClient.GetFromJsonAsync<Department[]>("api/departments");
         }
-
     }
 }
 

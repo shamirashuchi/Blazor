@@ -43,7 +43,7 @@
         }
       }
     },
-    "/employeedetails/{id}": {
+    "/api/Employees/{id}": {
       "get": {
         "tags": [
           "Employees"

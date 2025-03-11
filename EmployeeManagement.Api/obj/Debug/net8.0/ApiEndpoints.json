@@ -22,7 +22,7 @@
   {
     "ContainingType": "EmployeeManagement.Api.Controllers.EmployeesController",
     "Method": "GetEmployee",
-    "RelativePath": "employeedetails/{id}",
+    "RelativePath": "api/Employees/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

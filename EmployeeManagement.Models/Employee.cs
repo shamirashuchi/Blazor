@@ -10,7 +10,7 @@ namespace EmployeeManagement.Models
 {
     public class Employee
     {
-        public int id { get; set; }
+        public int Id { get; set; }
         
        
         public string FirstName { get; set; }

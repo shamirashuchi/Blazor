@@ -13,11 +13,17 @@ namespace EmployeeManagement.Api.Models
             this.appDbContext = appDbContext;
         }
 
+        public async Task<IEnumerable<Employee>> GetEmployees()
+        {
+            return   await appDbContext.Employees.ToListAsync();
+
+        }
+
         public async Task<Employee> GetEmployee(int employeeId)
         {
             var result =  await appDbContext.Employees
                 .Include(e => e.Department)
-                .FirstOrDefaultAsync(e => e.id == employeeId);
+                .FirstOrDefaultAsync(e => e.Id == employeeId);
             return result;
         }
         public async Task<Employee> AddEmployee(Employee employee)
@@ -31,7 +37,7 @@ namespace EmployeeManagement.Api.Models
 
         {
             var result = await appDbContext.Employees
-             .FirstOrDefaultAsync(e => e.id == employeeId);
+             .FirstOrDefaultAsync(e => e.Id == employeeId);
             if (result != null)
             {
                 appDbContext.Employees.Remove(result);
@@ -64,16 +70,13 @@ namespace EmployeeManagement.Api.Models
 
 
 
-        public async Task<IEnumerable<Employee>> GetEmployees()
-        {
-            return await appDbContext.Employees.ToListAsync();
-        }
+       
 
 
         public async Task<Employee> UpdateEmployee(Employee employee)
         {
             var result = await appDbContext.Employees
-                .FirstOrDefaultAsync(e => e.id== employee.id);
+                .FirstOrDefaultAsync(e => e.Id== employee.Id);
             if(result != null)
             {
                 result.FirstName = employee.FirstName;

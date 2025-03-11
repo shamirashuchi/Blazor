@@ -68,7 +68,7 @@ namespace EmployeeManagement.Api.Controllers
 
 
        
-        [HttpGet("/employeedetails/{id:int}")]
+        [HttpGet("{id:int}")]
         public async Task<ActionResult<Employee>> GetEmployee(int id)
         {
             try

@@ -1,11 +1,15 @@
-﻿@page "/employeedetails/{id}"
+﻿@page "/employeedetails/{Id}"
 @page "/employeedetails"
 @inherits EmployeeDetailsBase
-
-@if (Employee == null || Employee.Department == null)
+<p>Hello</p>
+@if (Employee == null )
 {
-    <div class="spinner"></div>
+    <div class="spinner">Employee</div>
 }
+else if(Employee.Department == null)
+ { 
+  <div class="spinner">Employee.Department</div> 
+ }
 else
 {
     <div class="row justify-content-center m-3">
@@ -18,9 +22,9 @@ else
                 <div class="card-body text-center">
                     <img class="card-img-top" src="@Employee.PhotoPath" />
 
-                    <h4>Employee ID : @Employee.id</h4>
+                    <h4>Employee ID : @Employee.Id</h4>
                     <h4>Email : @Employee.Email</h4>
-                    <h4>Department : @Employee.Department.DepartmentName</h4>
+                    @* <h4>Department : @Employee.Department.DepartmentName</h4> *@
                 </div>
                 <div class="card-footer text-center">
                     <a href="/" class="btn btn-primary">Back</a>

@@ -1,13 +1,7 @@
 ﻿@page "/editemployee/{id}"
 
-
 @inherits EditEmployeeBase
-@if (Employee == null)
-{
-    <p>Loading...</p>
-}
-else
-{
+
 <EditForm Model="@Employee">
     <h3>Edit Employee</h3>
     <hr />
@@ -42,18 +36,13 @@ else
         <label for="department" class="col-sm-2 col-form-label">
             Department
         </label>
-   
         <div class="col-sm-10">
-            <InputSelect id="department" class="form-control" @bind-Value="Employee.DepartmentId">
-                <option value="">Select Department</option>
+            <InputSelect id="department" @bind-Value="DepartmentId" class="form-control">
                 @foreach (var dept in Departments)
                 {
                     <option value="@dept.DepartmentId">@dept.DepartmentName</option>
                 }
             </InputSelect>
         </div>
-
-
     </div>
 </EditForm>
-}
