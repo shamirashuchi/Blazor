@@ -4,8 +4,7 @@ using Microsoft.AspNetCore.Components;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
-namespace EmployeeManagement.Web.Pages
+namespace EmployeeManagement.web.Components.Pages
 {
     public class EditEmployeeBase : ComponentBase
     {
